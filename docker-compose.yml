@@ -3,14 +3,9 @@ version: '3'
 services:
   backend:
     build: ./backend
+    container_name: wisora-backend
     ports:
       - "3000:3000"
     env_file:
       - ./backend/.env
-
-  frontend:
-    build: ./frontend
-    ports:
-      - "5173:5173"
-    env_file:
-      - ./frontend/.env
+    restart: unless-stopped
