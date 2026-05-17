@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: wisora-backend
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: wisora-backend
+
+  template:
+    metadata:
+      labels:
+        app: wisora-backend
+
+    spec:
+      containers:
+      - name: wisora-backend
+
+        image: prysh/wisora-07:18
+
+        ports:
+        - containerPort: 3000
+
+        envFrom:
+        - secretRef:
+            name: wisora-secret
