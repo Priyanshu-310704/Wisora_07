@@ -48,7 +48,7 @@ app.use(cors({
 }));
 
 app.get("/api", (req, res) => {
-  res.status(200).send("Wisora API is running.");
+  res.status(200).send("Wisora API is running✈️.");
 });
 
 app.get("/health", (req, res) => {
