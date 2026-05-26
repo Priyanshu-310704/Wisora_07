@@ -72,11 +72,10 @@ if (fs.existsSync(path.join(clientBuildPath, "index.html"))) {
   });
 } else {
   app.get("/", (req, res) => {
-    res.status(200).send("Wisora API is running.");
+    res.status(200).send("Wisora API is running 🔥🔥.");
   });
 }
 
 app.use(errorHandler);
 
 module.exports = app;
-//done
